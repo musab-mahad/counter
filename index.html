@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Counter App</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="app" role="application" aria-label="Counter Application">
+      <h1>Interactive Counter</h1>
+
+      <!-- Counter Display -->
+      <div
+        id="counter"
+        class="counter-display zero"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        0
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <button class="btn-dec" aria-label="Decrement counter">
+          <i class="fas fa-minus"></i>
+        </button>
+        <button class="btn-reset" aria-label="Reset counter">
+          <i class="fas fa-rotate-left"></i>
+        </button>
+        <button class="btn-inc" aria-label="Increment counter">
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+
+      <!-- History -->
+      <section class="history" aria-label="Counter history">
+        <h2>History</h2>
+        <ul id="historyList"></ul>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
